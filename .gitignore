@@ -1,0 +1,16 @@
+*.aux
+*.cb
+*.cb2
+*.dvi
+*.fdb_latexmk
+*.fls
+*.fmt
+*.fot
+*.lof
+*.log
+*.lot
+*.out
+*.pdf
+*.toc
+*.xdv
+.*.lb
