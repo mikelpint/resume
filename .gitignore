@@ -16,3 +16,4 @@
 .*.lb
 *.png
 !assets/**/*.png
+!preview/**/*.png
