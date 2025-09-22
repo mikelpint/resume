@@ -1,1 +1,1 @@
-![Resume preview](/home/mikel/Documents/CV/preview/en.png)
+![Resume preview](preview/en.png)

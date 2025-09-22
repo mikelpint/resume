@@ -75,7 +75,7 @@ case "${1:-}" in
                 "${PREVIEW}/${lang}.png"
         done
 
-        echo -e "![Resume preview](${PREVIEW}/${langs[0]}.png)" > README.md
+        echo -e "![Resume preview]($(realpath -s --relative-to="${BASE}" "${PREVIEW}/${langs[0]}.png"))" > README.md
 
         onexit
     ;;
