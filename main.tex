@@ -104,7 +104,7 @@
 
 \begin{center}
 	\name{Mikel Pintado del Campo}
-	\\ \vspace{2pt}
+	\\ \vspace{1pt}
 
 	\small{
 		\phone{+34651459885} $|$
@@ -229,15 +229,60 @@
 \iflangver{en}{\newcommand{\asm}[1]{#1 assembly}}
 \iflangver{es}{\newcommand{\asm}[1]{ensamblador de #1}}
 
+\iflangver{en}{\newcommand{\andconj}{and}}
+\iflangver{es}{\newcommand{\andconj}{y}}
+
 \newcommand{\pl}{
-	C, C++, Java, JavaScript/TypeScript, Rust, HTML, (S)CSS, SQL, Nix, Python, R, \asm{RISC-V}, \asm{x86\_64},
-	Q\#, QCL, Cue, Unix shell \iflangver{en}{and}\iflangver{es}{y} LaTeX.
+	C, C++, Java, JavaScript/TypeScript, JSX/TSX/MDX, Rust, HTML/XML, (S)CSS, SQL, Nix, Python, R, \asm{RISC-V},
+	\asm{x86\_64}, Q\#, QCL, Cue, Handlebars, Unix shell \andconj{} LaTeX.
 }
+
+\iflangver{en}{
+	\newcommand{\os}{
+		Microsoft Windows, UNIX-like and/or POSIX-compliant systems: Linux (mostly NixOS, Alpine, Arch-, Debian- and
+		Red Hat-based systems) and FreeBSD.
+	}
+}
+\iflangver{es}{
+	\newcommand{\os}{
+		Microsoft Windows y sistemas operativos tipo UNIX o que cumplan el estándar POSIX: Linux (sobre todo NixOS,
+		Alpine, o basados en Arch, Debian y Red Hat) y FreeBSD.
+	}
+}
+
+\newcommand{\infra}{
+	Docker, Vagrant, Ansible, \textit{systemd}, QEMU, Apache, Nginx, HAProxy, Keepalived,
+	\textit{iptables}/\textit{nftables}, Tailscale, WireGuard, SSH, FTP \andconj{} Onion.
+}
+
+\newcommand{\db}{
+	SQLite, MySQL, PostgreSQL (+ TigerData), MongoDB, Redis, JDBC, Sequelize \andconj{} Prisma.
+}
+
+\newcommand{\frontend}{
+	Jekyll, Preact/React, Next.js, Deno Fresh, React Query, TinyMCE, Sass, Tailwind CSS \andconj{} Bootstrap.
+}
+
+\newcommand{\backend}{
+	Node.js, Deno, Express, NestJS, Swagger/OpenAPI, Jetty, BullMQ, Keyv, Pino \andconj{} Spring Boot.
+}
+
+\newcommand{\vcs}{
+	Git, TurboRepo, Husky \andconj{} \textit{commitlint}.
+}
+
+\newcommand{\build}{
+	GCC, Clang, TCC, MSCV, POCC, (GNU) Make, Meson, Maven, Gradle, Apache Ant \andconj{} \textit{webpack}.
+}
+
+\newcommand{\test}{
+	GDB, LLDB, Valgrind, \iflangver{en}{Clang sanitizers}\iflangver{es}{sanitizadores de Clang}, Criterion, JUnit, Jest,
+	\textit{supertest}, Istanbul \andconj{} JaCoCo.
+}
+
 \newcommand{\lib}{
-	Git, UNIX/Linux, NixOS, \textit{systemd}, Docker, Vagrant, QEMU, Ansible, SQLite, PostgreSQL (TigerData), MongoDB,
-	Redis, Prisma, Apache, Nginx, HAProxy, GMP/MPFR/MPC, Make, Meson, Maven, Gradle, Apache Ant, Preact/React, Next.js,
-	Tailwind CSS, Bootstrap, Sass, Node.js, Deno (Fresh), Express, NestJS, GCC, Clang, TCC, MSVC, POCC, Valgrind, GDB,
-	cURL, \textit{nftables}, Turborepo, JUnit, Jest, Spring Boot, Keepalived, SSH, \textit{libnm}, \textit{ncurses}, ...
+	GMP/MPFR/MPC, Mermaid, \textit{libnm}, \textit{libnft}, \textit{libcurl}, \textit{axios}, WinAPI,
+	\textit{compromise}, DOMPurify, \textit{jsdom}, JSON Schema (Ajv), Zod, JWT, OAuth, Passport.js, LTI, ...
 }
 
 \iflangver{en}{\section{Technical Skills}}
@@ -245,16 +290,46 @@
 
 \begin{itemize}[leftmargin=0.15in, label={}]
 	\small{\item{
+	      \iflangver{en}{\textbf{Languages}{: Spanish (native), English (Cambridge C1), Basque (B2 equivalent).}}
+	      \iflangver{es}{\textbf{Idiomas}{: castellano (nativo), inglés (Cambridge C1), euskera (equivalente a B2).}}
+	      \\
+
 	      \iflangver{en}{\textbf{Computer languages}{: \pl}}
 	      \iflangver{es}{\textbf{Lenguajes informáticos}{: \pl}}
 	      \\
 
-	      \iflangver{en}{\textbf{Frameworks, libraries and technologies}{: \lib}}
-	      \iflangver{es}{\textbf{Frameworks, bibliotecas y tecnologías}{: \lib}}
+	      \iflangver{en}{\textbf{Operating systems}{: \os}}
+	      \iflangver{es}{\textbf{Sistemas operativos}{: \os}}
 	      \\
 
-	      \iflangver{en}{\textbf{Languages}{: Spanish (native), English (Cambridge C1), Basque (B2 equivalent)}}
-	      \iflangver{es}{\textbf{Idiomas}{: castellano (nativo), inglés (Cambridge C1), euskera (equivalente a B2)}}
+	      \iflangver{en}{\textbf{Infrastructure, networks and deployment}{: \infra}}
+	      \iflangver{es}{\textbf{Infraestructura, redes y despliegue}{: \infra}}
+	      \\
+
+	      \iflangver{en}{\textbf{Databases}{: \db}}
+	      \iflangver{es}{\textbf{Bases de datos}{: \db}}
+	      \\
+
+	      {\textbf{Frontend}{: \frontend}}
+	      \\
+
+	      {\textbf{Backend}{: \backend}}
+	      \\
+
+	      \iflangver{en}{\textbf{Version control systems and code organization}{: \vcs}}
+	      \iflangver{es}{\textbf{Sistemas de control de versiones y organización del código}{: \vcs}}
+	      \\
+
+	      \iflangver{en}{\textbf{Compilers and build systems}{: \build}}
+	      \iflangver{es}{\textbf{Compiladores y sistemas de construcción}{: \build}}
+	      \\
+
+	      \iflangver{en}{\textbf{Testing, coverage and debugging}{: \test}}
+	      \iflangver{es}{\textbf{Pruebas, cobertura y depuración}{: \test}}
+	      \\
+
+	      \iflangver{en}{\textbf{Libraries, protocols and miscellaneous technologies}{: \lib}}
+	      \iflangver{es}{\textbf{Bibliotecas, protocolos y tecnologías misceláneas}{: \lib}}
 	      }}
 \end{itemize}
 
